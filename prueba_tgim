@@ -1,0 +1,25 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Thu Oct  4 16:45:44 2018
+
+@author: pmorenov
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+#%%
+# First exercise: sinusoidal signal
+
+fs = 1/0.02 #Hz, sampling frequency
+f = 1/5 #Hz, frequency
+t = np.arange(0,10,1/fs) #time in seconds
+
+y = np.sin(f*2*np.pi*t) + np.random.randn(len(t))
+
+#%%
+# Plotting first exercise
+
+plt.figure()
+plt.plot(t, y)
